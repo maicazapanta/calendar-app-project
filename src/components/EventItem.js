@@ -8,20 +8,10 @@ const EventItem = (props) => {
   console.log(item);
 
   const inputRef = useRef(true);
-  const statusRef = useRef(true);
-  const dateRef = useRef(true);
 
   const changeFocus = () => {
     inputRef.current.disabled = false;
     inputRef.current.focus();
-  };
-  const changeFocusDate = () => {
-    statusRef.current.disabled = false;
-    statusRef.current.focus();
-  };
-  const changeFocusStatus = () => {
-    dateRef.current.disabled = false;
-    dateRef.current.focus();
   };
 
   const update = (id, value, e) => {
@@ -75,14 +65,14 @@ const EventItem = (props) => {
       />
 
       <div className="btns">
-        <motion.button
+        {/* <motion.button
           whileHover={{ scale: 1.4 }}
           whileTap={{ scale: 0.9 }}
           onClick={() => changeFocus()}
         >
           {" "}
           <AiFillEdit />{" "}
-        </motion.button>
+        </motion.button> */}
         {item.completed === false && (
           <motion.button
             whileHover={{ scale: 1.4 }}

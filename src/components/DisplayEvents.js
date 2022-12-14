@@ -64,6 +64,7 @@ const DisplayEvents = (props) => {
           {props.events.length > 0 && sort === "pending"
             ? props.events.map((item) => {
                 return (
+                  item.completed === false &&
                   item.item.status === "pending" && (
                     <EventItem
                       key={item.id}
@@ -80,6 +81,7 @@ const DisplayEvents = (props) => {
           {props.events.length > 0 && sort === "ongoing"
             ? props.events.map((item) => {
                 return (
+                  item.completed === false &&
                   item.item.status === "ongoing" && (
                     <EventItem
                       key={item.id}
@@ -95,8 +97,7 @@ const DisplayEvents = (props) => {
           {props.events.length > 0 && sort === "done"
             ? props.events.map((item) => {
                 return (
-                  item.completed === true &&
-                  item.item.status === "done" && (
+                  item.completed === true && (
                     <EventItem
                       key={item.id}
                       item={item}

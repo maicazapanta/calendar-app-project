@@ -72,7 +72,6 @@ const Events = (props) => {
         <option value="">Choose a status</option>
         <option value="pending">Pending</option>
         <option value="ongoing">Ongoing</option>
-        <option value="done">Done</option>
       </select>
 
       <motion.button
